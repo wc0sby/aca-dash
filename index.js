@@ -53,12 +53,16 @@ function find(theArray, fnc){
 
 //return the last item in theArray
 function findLast(theArray){
-
+  for (let i = 0; i < theArray.length; i++) {
+    if (i + 1 === theArray.length){
+      return theArray[i]
+    }
+  }
 }
 
 //return the first element of the array
 function head(theArray){
-
+  return theArray[0]
 }
 
 //create a new array
@@ -66,7 +70,11 @@ function head(theArray){
 //add the item from each loop to the new array
 //return the new array
 function reverse(theArray){
-
+  const newArr = []
+  for (let i = theArray.length - 1; i > -1; i--) {
+    newArr.push(theArray[i])
+  }
+  return newArr
 }
 
 //create a new array
@@ -74,7 +82,10 @@ function reverse(theArray){
 //add the item from each loop to the new array except the first item
 //return the new array
 function tail(theArray){
-
+  const newArr = []
+  for (let i = 1; i < theArray.length; i++) {
+        
+  }
 }
 
 //implement the most basic sorting algorithm there is
