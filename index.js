@@ -99,7 +99,20 @@ function tail(theArray){
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
 function sort(theArray){
-
+  let sorted = false
+  console.log(theArray)
+  while (!sorted) {
+    for (let i = 0; i < theArray.length; i++) {
+      if (theArray[i] > theArray[i+1]) {
+      const originalPositionVal = theArray[i]
+      const newPositionVal = theArray[i+1]
+        theArray[i] = newPositionVal
+        theArray[i+1] = originalPositionVal
+      }    
+    }
+    sorted = true
+  }
+    return theArray
 }
 
 exports.map = map;
