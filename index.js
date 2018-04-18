@@ -12,7 +12,11 @@
 //add the returned value from iteratee tp myNewArray
 //after looping, return  myNewArray
 function map(array, iteratee){
-
+  const mappedArr = []
+  for (let i = 0; i < array.length; i++) {
+    mappedArr.push(iteratee(array[i]))
+  }
+  return mappedArr
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
@@ -25,7 +29,11 @@ function map(array, iteratee){
 //iteratee will return true or false, if true add the item to myNewArray else do not
 //after looping, return myNewArray
 function filter(array, iteratee){
-
+  const filterArr = []
+  for (let i = 0; i < array.length; i++) {
+    iteratee(array[i]) ? filterArr.push(array[i]) : ''
+  }
+  return filterArr
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
@@ -35,9 +43,13 @@ function filter(array, iteratee){
 //fnc will return true or false, if true return the item 
 //after looping, return null
 function find(theArray, fnc){
-
+  const found = []
+  for (let i = 0; i < theArray.length; i++) {
+    if (fnc(theArray[i])){
+      return theArray[i]
+    }
+  }
 }
-
 
 //return the last item in theArray
 function findLast(theArray){
