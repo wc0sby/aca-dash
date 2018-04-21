@@ -100,19 +100,20 @@ function tail(theArray){
 //if false return theArray
 function sort(theArray){
   let sorted = false
-  console.log(theArray)
-  while (!sorted) {
+  while (!sorted){
     for (let i = 0; i < theArray.length; i++) {
-      if (theArray[i] > theArray[i+1]) {
-      const originalPositionVal = theArray[i]
-      const newPositionVal = theArray[i+1]
-        theArray[i] = newPositionVal
-        theArray[i+1] = originalPositionVal
-      }    
+      // set x to the parent's initializer to reset where we are in the array
+      for (let x = i; x < theArray.length; x++) {
+        if (theArray[i] > theArray[x]){
+          const temp = theArray[i]
+          theArray[i] = theArray[x]
+          theArray[x] = temp
+          sorted = true
+        }
+      }
     }
-    sorted = true
   }
-    return theArray
+  return theArray
 }
 
 exports.map = map;
