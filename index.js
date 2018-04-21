@@ -43,7 +43,6 @@ function filter(array, iteratee){
 //fnc will return true or false, if true return the item 
 //after looping, return null
 function find(theArray, fnc){
-  const found = []
   for (let i = 0; i < theArray.length; i++) {
     if (fnc(theArray[i])){
       return theArray[i]
