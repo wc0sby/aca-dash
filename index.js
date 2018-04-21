@@ -11,7 +11,7 @@
 //iteratee is a function that must return something, capture whatever it returns in a variable
 //add the returned value from iteratee tp myNewArray
 //after looping, return  myNewArray
-function map(array, iteratee){
+const map=(array, iteratee)=>{
   const mappedArr = []
   for (let i = 0; i < array.length; i++) {
     mappedArr.push(iteratee(array[i]))
@@ -28,7 +28,7 @@ function map(array, iteratee){
 //     passing in the item from the current loop
 //iteratee will return true or false, if true add the item to myNewArray else do not
 //after looping, return myNewArray
-function filter(array, iteratee){
+const filter=(array, iteratee)=>{
   const filterArr = []
   for (let i = 0; i < array.length; i++) {
     iteratee(array[i]) ? filterArr.push(array[i]) : ''
@@ -42,7 +42,7 @@ function filter(array, iteratee){
 //     passing in the item from the current loop
 //fnc will return true or false, if true return the item 
 //after looping, return null
-function find(theArray, fnc){
+const find=(theArray, fnc)=>{
   for (let i = 0; i < theArray.length; i++) {
     if (fnc(theArray[i])){
       return theArray[i]
@@ -51,7 +51,7 @@ function find(theArray, fnc){
 }
 
 //return the last item in theArray
-function findLast(theArray){
+const findLast=(theArray)=>{
   for (let i = 0; i < theArray.length; i++) {
     if (i + 1 === theArray.length){
       return theArray[i]
@@ -60,7 +60,7 @@ function findLast(theArray){
 }
 
 //return the first element of the array
-function head(theArray){
+const head=(theArray)=>{
   return theArray[0]
 }
 
@@ -68,7 +68,7 @@ function head(theArray){
 //loop theArray in reverse order
 //add the item from each loop to the new array
 //return the new array
-function reverse(theArray){
+const reverse=(theArray)=>{
   const newArr = []
   for (let i = theArray.length - 1; i > -1; i--) {
     newArr.push(theArray[i])
@@ -80,7 +80,7 @@ function reverse(theArray){
 //loop theArray
 //add the item from each loop to the new array except the first item
 //return the new array
-function tail(theArray){
+const tail=(theArray)=>{
   const newArr = []
   for (let i = 1; i < theArray.length; i++) {
         
@@ -97,7 +97,7 @@ function tail(theArray){
 //if a swap is done set it to true
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
-function sort(theArray){
+const sort=(theArray)=>{
   let sorted = false
   while (!sorted){
     for (let i = 0; i < theArray.length; i++) {

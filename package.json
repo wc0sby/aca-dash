@@ -1,0 +1,14 @@
+{
+  "name": "edaw-dash",
+  "version": "1.0.0",
+  "description": "custom higher order functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "aca-dash"
+  ],
+  "author": "Wade Cosby",
+  "license": "ISC"
+}
