@@ -1,4 +1,4 @@
-
+const arr = [3,1,5,9,1,3]
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 //create a function called `map`, it should take 2 parameters `array` and `iteratee`
 //`array` must be an array
@@ -83,9 +83,12 @@ const reverse=(theArray)=>{
 const tail=(theArray)=>{
   const newArr = []
   for (let i = 1; i < theArray.length; i++) {
-        
+    newArr.push(theArray[i])        
   }
+  return newArr
 }
+
+
 
 //implement the most basic sorting algorithm there is
 //assume the array will always have numbers
@@ -123,3 +126,4 @@ exports.reverse = reverse;
 exports.tail = tail;
 exports.sort = sort;
 exports.findLast = findLast;
+
